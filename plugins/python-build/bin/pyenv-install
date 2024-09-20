@@ -249,10 +249,11 @@ for DEFINITION in "${DEFINITIONS[@]}"; do
   # Execute `before_install` hooks.
   for hook in "${before_hooks[@]}"; do eval "$hook"; done
 
+  echo "#### begin python-build #######"
   # Invoke `python-build` and record the exit status in $STATUS.
   python-build $KEEP $VERBOSE $HAS_PATCH $DEBUG "$DEFINITION" "$PREFIX" || \
       { STATUS=$?; [[ $STATUS -gt $COMBINED_STATUS ]] && COMBINED_STATUS=$STATUS; }
-
+  echo "#### end python-build #######"
   # Display a more helpful message if the definition wasn't found.
   if [ "$STATUS" == "2" ]; then
     { candidates="$(definitions "$DEFINITION")"
