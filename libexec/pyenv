@@ -136,7 +136,7 @@ case "$command" in
     fi
   else
     echo "##########" "$command_path" "$@"
-    exec "$command_path" "$@"
+    source "$command_path" "$@"
   fi
   ;;
 esac
