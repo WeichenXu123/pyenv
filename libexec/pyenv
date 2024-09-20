@@ -135,7 +135,7 @@ case "$command" in
       exec pyenv-help "$command"
     fi
   else
-    exec "$command_path" "$@"
+    bash "$command_path" "$@"
   fi
   ;;
 esac
