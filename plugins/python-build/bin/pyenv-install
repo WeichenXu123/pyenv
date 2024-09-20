@@ -298,6 +298,6 @@ done
 
 
 echo "#### pyenv installatioin complete ####### PID #### PID $$"
-exit "${COMBINED_STATUS}"
-echo "### exit done ###"
+# exit "${COMBINED_STATUS}"
+echo "### pyenv install exit ###"
 # kill -9 $$
