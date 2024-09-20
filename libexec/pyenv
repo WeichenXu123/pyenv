@@ -135,8 +135,11 @@ case "$command" in
       exec pyenv-help "$command"
     fi
   else
+    echo "#### PID $$"
     echo "##########" "$command_path" "$@"
     source "$command_path" "$@"
+    echo "### pyenv install done!!! ###"
   fi
   ;;
 esac
+echo "### pyenv exit!!! ###"
