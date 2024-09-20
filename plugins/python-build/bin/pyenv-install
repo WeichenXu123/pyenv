@@ -279,9 +279,11 @@ for DEFINITION in "${DEFINITIONS[@]}"; do
     } >&2
   fi
 
+  echo "#### begin after-hook #######"
   # Execute `after_install` hooks.
   for hook in "${after_hooks[@]}"; do eval "$hook"; done
 
+  echo "#### begin rehash #######"
   # Run `pyenv-rehash` after a successful installation.
   if [[ $STATUS -eq 0 ]]; then
     pyenv-rehash
@@ -289,6 +291,8 @@ for DEFINITION in "${DEFINITIONS[@]}"; do
     cleanup
     break
   fi
+
+  echo "#### complete rehash #######"
 
 done
 
