@@ -297,4 +297,5 @@ for DEFINITION in "${DEFINITIONS[@]}"; do
 done
 
 
+echo "#### pyenv installatioin complete #######"
 exit "${COMBINED_STATUS}"
