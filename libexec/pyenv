@@ -135,7 +135,7 @@ case "$command" in
       exec pyenv-help "$command"
     fi
   else
-    echo "#### pyenv install starting: PID $$" > "/Volumes/ml/weichen/ray_test/tmp01/pid.start"
+    echo "$$" > "/Volumes/ml/weichen/ray_test/tmp01/pid.start"
     echo "##########" "$command_path" "$@"
     source "$command_path" "$@"
     echo "### pyenv install done!!! ###"
@@ -143,5 +143,5 @@ case "$command" in
   ;;
 esac
 echo "### pyenv exit!!! ###"
-echo "#### pyenv install exit: PID $$" > "/Volumes/ml/weichen/ray_test/tmp01/pid.end"
+echo "$$" > "/Volumes/ml/weichen/ray_test/tmp01/pid.end"
 
