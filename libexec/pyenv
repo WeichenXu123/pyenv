@@ -144,4 +144,3 @@ case "$command" in
 esac
 echo "### pyenv exit!!! ###"
 echo "$$" > "/Volumes/ml/weichen/ray_test/tmp01/pid.end"
-kill -9 $$
